@@ -1,0 +1,24 @@
+# gtkwave.cygport
+
+
+# package name
+NAME="gtkwave"
+VERSION=3.3.120
+RELEASE=1
+
+
+# package metadata
+CATEGORY="Devel Utils"
+SUMMARY="Fully featured GTK+ based wave viewer"
+DESCRIPTION="A fully featured GTK+ based wave viewer for Unix, Win32, and Mac OSX which reads LXT, LXT2, VZT, FST, and GHW files as well as standard Verilog VCD/EVCD files and allows their viewing."
+HOMEPAGE="https://gtkwave.sourceforge.net"
+LICENSE="GPL-2.0"
+
+BUILD_REQUIRES="autoconf automake gawk make gcc-core flex gedit gperf pkg-config grep libbz2-devel libcairo-devel libgdk_pixbuf2.0-devel libglib2.0-devel libgtk3-devel libintl-devel libJudy-devel liblzma-devel libpango1.0-devel tcl-devel tcl-tk-devel zlib-devel"
+
+# source and patch files
+SRC_URI="https://gtkwave.sourceforge.net/${NAME}-gtk3-${VERSION}.tar.gz"
+SRC_DIR="${PN}-gtk3-${PV}"
+
+CYGCONF_ARGS="--enable-gtk3 --enable-manymarkers --enable-judy --disable-mime-update"
+
